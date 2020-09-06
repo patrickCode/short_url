@@ -1,6 +1,6 @@
 var config = {
-    port: 3000,
-    mongoDbConnectionString: "mongodb+srv://pratikb:tester001@cluster0.pdakw.azure.mongodb.net/vanity_url?retryWrites=true&w=majority" || process.env.MONGO_URI
+    port:  process.env.PORT || 5000,
+    mongoDbConnectionString: process.env.MONGO_URI ||"mongodb+srv://tester:tester001@cluster0.pdakw.azure.mongodb.net/vanity_url?retryWrites=true&w=majority"
 };
 
 module.exports = config;
