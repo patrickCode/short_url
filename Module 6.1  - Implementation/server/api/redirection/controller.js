@@ -6,9 +6,6 @@ exports.redirect = function (req, res, next) {
         .then(function(model) {
             if (model == null)
                 next(new Error('Invalid Key'));
-            //res.json(model);
-            //console.log(model);
-            //console.log(model.originalUrl);
             res.setHeader('Location', model.originalUrl);
             res.status(301);
             res.send();
